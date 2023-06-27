@@ -1,0 +1,80 @@
+"set leader key
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+
+" 高亮显示所有搜索内容
+set hlsearch
+" 动态高亮显示关键字
+set incsearch
+" 忽略大小写
+set ignorecase
+" 智能匹配大小写
+set smartcase
+" 显示当前模式
+set showmode
+" 光标上下显示行数
+set scrolloff=5
+
+" 共享系统粘贴板
+set clipboard=unnamed
+set clipboard+=ideaput
+
+
+" idea智能合并
+set ideajoin
+
+" Plugin 插件
+" 快速移动到指定位置
+set easymotion
+" 环绕操作文本对象
+set surround
+" 添加方法参数作为文本对象
+set argtextobj
+" 高亮显示复制内容
+set highlightedyank
+" 添加整个文件作为文本对象
+set textobj-entire
+" 设置normal模式固定使用英文输法
+set keep-english-in-normal-and-restore-in-insert
+" 设置寄存器内容替换当前文本
+set ReplaceWithRegister
+
+" 删除高亮搜索结果
+nnoremap <leader>sc :nohlsearch<CR>
+
+" easymotion
+map <leader>f <Plug>(easymotion-s)
+
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+inoremap <C-a><Home>
+inoremap <C-e> <End>
+
+" 编辑vimrc
+nnoremap <leader>ve :e ~/.ideavimrc<CR>
+nnoremap <leader>vs :source ~/.ideavimrc<CR>
+
+" 打开最近使用文件
+nnoremap fr :action RecentFiles<CR>
+" 打开文件搜索框
+nnoremap ff :action GotoFile<CR>
+" 打开文字查找框
+nnoremap fw :action Find<CR>
+" 打开全局文字查找框
+nnoremap fp :action FindInPath<CR>
+" 查找变量/方法引用
+nnoremap fd :action GotoDeclaration<CR>
+" 查找实现
+nnoremap fi :action GotoImplementation<CR>
+" 打开类方法
+nnoremap fm :action FileStructurePopup<CR>
+" 后退
+nnoremap fh :action Back<CR>
+" 前进
+nnoremap fl :action Forward<CR>
+" 更新代码
+nnoremap gu :action Vcs.UpdateProject<CR>
+" 查看当前行提交记录
+nnoremap ta :action Annotate<CR>
